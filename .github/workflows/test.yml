@@ -1,2 +1,26 @@
-- name: Hello Daniyal
-  uses: daniyalj/ga-hello-world@v1
+name: hello
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+  pull_request:
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # - name: build and test code
+    #   run: make build
+
+    - name: Hello Daniyal
+      uses: daniyalj/ga-hello-world@v1
+
