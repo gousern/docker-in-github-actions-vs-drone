@@ -24,12 +24,12 @@ steps:
   image: plugins/docker:linux-amd64
   settings:
     auto_tag: true
-    cache_from: appleboy/gin-docker-demo
+    cache_from: gousern/github-actions-testing
     daemon_off: false
     dockerfile: Dockerfile
     password:
       from_secret: docker_password
-    repo: appleboy/gin-docker-demo
+    repo: gousern/github-actions-testing
     username:
       from_secret: docker_username
   when:
